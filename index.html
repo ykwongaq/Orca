@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project Display</title>
+        <style>
+            /* General Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+                color: #333;
+            }
+
+            body {
+                background-color: #f9f9f9;
+                line-height: 1.6;
+                padding: 20px;
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #2c3e50;
+            }
+
+            h1 span {
+                text-decoration: underline;
+            }
+
+            a {
+                color: #3498db;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            /* Container */
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Header */
+            .header {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+                color: #7f8c8d;
+            }
+
+            /* Paragraph Styles */
+            .project p,
+            .header p,
+            footer p {
+                max-width: 80%;
+                margin: 0 auto; /* Align to the center */
+                text-align: justify; /* Justify text content */
+            }
+
+            /* Project Section */
+            .project {
+                margin-bottom: 40px;
+            }
+
+            .project h2 {
+                font-size: 1.75rem;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .project .tags {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .project .tags span {
+                display: inline-block;
+                background-color: #3498db;
+                color: #fff;
+                font-size: 0.8rem;
+                padding: 5px 10px;
+                margin-right: 5px;
+                border-radius: 5px;
+            }
+
+            /* Image Section */
+            .image-section {
+                text-align: center;
+                margin: 20px auto 40px;
+                max-width: 80%; /* Align with paragraphs */
+            }
+
+            .image-section img {
+                max-width: 100%;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                display: block; /* Ensure image is treated as a block element */
+                margin: 0 auto; /* Center the image */
+            }
+
+            .image-section .caption {
+                font-size: 0.9rem;
+                color: #7f8c8d;
+                margin-top: 8px;
+                text-align: center;
+            }
+
+            /* Footer */
+            footer {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 0.9rem;
+                color: #7f8c8d;
+            }
+
+            footer a {
+                font-size: 0.9rem;
+            }
+
+            .key-term {
+                background-color: #f0f8ff; /* Light blue background */
+                color: #2c3e50; /* Dark text color */
+                font-weight: bold; /* Bold text */
+                padding: 0 4px; /* Add slight padding */
+                border-radius: 4px; /* Rounded edges */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Header Section -->
+            <div class="header">
+                <h1>
+                    Orca: <span>O</span>bject <span>R</span>ecognition and
+                    <span>C</span>omprehension for <span>A</span>rchiving Marine
+                    Species
+                </h1>
+                <h2>Supplemenary</h2>
+                <p style="text-align: center">ACM MM 2025 Submission</p>
+                <p style="text-align: center">Submission ID: 31</p>
+            </div>
+
+            <!-- Project 1 -->
+            <div class="project">
+                <h2>Dataset</h2>
+                <p style="text-align: center">
+                    We sampled 100 images from Orca dataset as an example.
+                    Readers can download the dataset via this
+                    <a
+                        href="https://hkust-vgd.nas.ust.hk:5001/sharing/HK5Pf2WkE"
+                        >link</a
+                    >.
+                </p>
+            </div>
+
+            <div class="project">
+                <h2>Quatative Visualization</h2>
+                <div class="image-section">
+                    <img
+                        src="images/quantitative_results.png"
+                        alt="quantitative visualization of the sample in Orca"
+                    />
+                    <p class="caption">
+                        Figure 1. Quantitative visualization of Orca.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <h2>BBOX Annotation</h2>
+                <p>
+                    We have developed a bounding box annotation platform, as
+                    illustrated in Figure 2. The left panel displays the input
+                    image along with user-provided point prompts. The platform
+                    integrates the Segment Anything Model (SAM) as the labeling
+                    engine, where green dots denote selected areas and red dots
+                    represent unselected areas. The right panel showcases the
+                    output, consisting of the automatically generated labeled
+                    bounding boxes and their corresponding instance masks
+                    produced by SAM.
+                </p>
+                <div class="image-section">
+                    <img
+                        src="images/bbox_annotation.png"
+                        alt="Bounding box annotation tool"
+                    />
+                    <p class="caption">
+                        Figure 2. Screenshot of the bounding box annotation
+                        platform. Left: input point prompt. Right: the labeled
+                        instance BBOX and mask.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project">
+                <h2>Caption Annotation</h2>
+                <p>
+                    We have developed a user-friendly caption annotation
+                    platform, as depicted in Figure 3. The left panel displays
+                    the image alongside its object bounding boxes, while the
+                    right panel contains the corresponding intention
+                    descriptions for the objects. To ensure annotation quality,
+                    the images were divided into subsets of 100 and assigned to
+                    experts, limiting the duration of consecutive tasks. Domain
+                    experts are required to refine at least one caption for each
+                    image. For the remaining captions, experts classify them as
+                    either <span class="key-term">Positive</span> or
+                    <span class="key-term">Negative</span>. For captions labeled
+                    as <span class="key-term">Negative</span>, experts must
+                    specify the corresponding error categories.
+                </p>
+                <div class="image-section">
+                    <img
+                        src="images/caption_annotation.PNG"
+                        alt="caption annotation"
+                    />
+                    <p class="caption">
+                        Figure 3. Screenshot of the caption annotation tool
+                        developed by us.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <!-- <footer>
+                <p>© 2025 Academic Showcase | <a href="#">Contact Us</a></p>
+            </footer> -->
+        </div>
+    </body>
+</html>
